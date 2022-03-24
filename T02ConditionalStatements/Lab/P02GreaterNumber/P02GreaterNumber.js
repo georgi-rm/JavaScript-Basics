@@ -1,6 +1,6 @@
 function getGreaterNumber(input) {
-    const firstNumber = input[0];
-    const secondNumber = input[1];
+    const firstNumber = Number(input[0]);
+    const secondNumber = Number(input[1]);
 
     let result;
 
@@ -12,6 +12,11 @@ function getGreaterNumber(input) {
 
     console.log(result)
 }
+
+getGreaterNumber([5, 3]);
+getGreaterNumber([3, 5])
+getGreaterNumber([10, 10])
+getGreaterNumber([-5, 5])
 
 getGreaterNumber(["5", "3"]);
 getGreaterNumber(["3", "5"])
