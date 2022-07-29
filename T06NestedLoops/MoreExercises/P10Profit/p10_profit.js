@@ -2,7 +2,7 @@ function profit(input) {
     const countOfCoinsOneLev = Number(input[0]);
     const countOfCoinsTwoLevs = Number(input[1]);
     const countOfCoinsFiveLevs = Number(input[2]);
-    const sumToPay = Number(input[3])
+    const sumToPay = Number(input[3]);
 
     for (let quantityOfOneLev = 0; quantityOfOneLev <= countOfCoinsOneLev; quantityOfOneLev++) {
         for (let quantityOfTwoLevs = 0; quantityOfTwoLevs <= countOfCoinsTwoLevs; quantityOfTwoLevs++) {

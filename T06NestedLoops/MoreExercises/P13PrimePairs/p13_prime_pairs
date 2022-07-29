@@ -1,0 +1,28 @@
+function primePairs(input) {
+    const beginOfIntervalForFirstPair = Number(input[0]);
+    const beginOfIntervalForSecondPair = Number(input[1]);
+    const differenceForFirstPair = Number(input[2]);
+    const differenceForSecondPair = Number(input[3]);
+
+    for (let firstPair = beginOfIntervalForFirstPair; firstPair <= beginOfIntervalForFirstPair + differenceForFirstPair; firstPair++) {
+        for (let secondPair = beginOfIntervalForSecondPair; secondPair <= beginOfIntervalForSecondPair + differenceForSecondPair; secondPair++) {
+
+            if (isPrime(firstPair) && isPrime(secondPair)) {
+                console.log(`${firstPair}${secondPair}`);
+            }
+        }
+    }
+
+    function isPrime(number) {
+        for (let i = 2; i < number; i++) {
+            if (number % i == 0) {
+                return false;
+            }
+        }
+        return true;
+    }
+}
+
+primePairs(["10", "20", "5", "5"]);
+console.log("-------------------------");
+primePairs(["10", "30", "9", "6"]);
