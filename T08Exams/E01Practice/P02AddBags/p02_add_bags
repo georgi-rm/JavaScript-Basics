@@ -1,0 +1,32 @@
+function addBags(input) {
+    const priceBagsOverTwentyKilos = Number(input[0]);
+    const weight = Number(input[1]);
+    const daysToTrip = Number(input[2]);
+    const countOfBags = Number(input[3]);
+    let pricePerBag = 0;
+
+    if (weight < 10) {
+        pricePerBag = 0.2 * priceBagsOverTwentyKilos;
+    } else if (weight <= 20) {
+        pricePerBag = 0.5 * priceBagsOverTwentyKilos;
+    } else {
+        pricePerBag = priceBagsOverTwentyKilos;
+    }
+
+    if (daysToTrip < 7) {
+        pricePerBag *= 1.40;
+    } else if (daysToTrip <= 30) {
+        pricePerBag *= 1.15;
+    } else {
+        pricePerBag *= 1.10;
+    }
+
+    const total = pricePerBag * countOfBags;
+    console.log(`The total price of bags is: ${total.toFixed(2)} lv.`);
+}
+
+addBags(["30", "18", "15", "2"]);
+console.log("-------------------------");
+addBags(["25.50", "5", "36", "6"]);
+console.log("-------------------------");
+addBags(["63.80", "23", "3", "1"]);
